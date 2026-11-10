@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Money Review Beta · BWGC Members</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Public+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Same black-and-gold editorial look as the public landing page; this version is for members testing the beta: no sign-up, no affiliate section, feedback in its place. */
+:root{
+  --night:#0E0D0B; --panel:#17150F; --line:#2C281D;
+  --gold:#D4A62A; --gold-soft:#E9C766; --ivory:#F3EEE2; --stone:#A9A190; --dim:#958E7C;
+  --gap:#3a2f0c;
+  --display:"DM Serif Display", Georgia, "Times New Roman", serif;
+  --body:"Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--night);color:var(--ivory);font-family:var(--body);font-size:17px;line-height:1.6;margin:0;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:16px}
+@media(min-width:720px){.wrap{padding-inline:40px}}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:var(--gold-soft)}
+:focus-visible{outline:2px solid var(--gold-soft);outline-offset:3px;border-radius:2px}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.draft{background:var(--gold);color:var(--night);text-align:center;font-size:12.5px;font-weight:700;letter-spacing:.06em;padding:7px 12px}
+.gap{display:inline-block;background:var(--gap);color:var(--gold-soft);border:1px dashed var(--gold);font-family:var(--mono);font-size:12px;padding:1px 7px;border-radius:3px;line-height:1.5}
+
+.top{display:flex;justify-content:space-between;align-items:center;padding-block:22px;gap:12px}
+.logo{font-family:var(--display);font-size:21px;color:var(--ivory);text-decoration:none;display:flex;align-items:center;gap:10px;line-height:1.1}
+.logo img{width:40px;height:40px;mix-blend-mode:lighten;flex:none}
+.logo b{font-weight:400;color:var(--gold)}
+.pill{font-family:var(--mono);font-size:12px;color:var(--night);background:var(--stone);padding:3px 9px;border-radius:2px;letter-spacing:.06em;white-space:nowrap}
+
+.hero{display:grid;gap:40px;padding-block:28px 64px;align-items:center}
+@media(min-width:900px){.hero{grid-template-columns:1.15fr .85fr;gap:56px;padding-block:48px 88px}}
+.hero h1{font-size:clamp(40px,6vw,72px);letter-spacing:-.01em;margin-top:18px}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero .lede{margin-top:18px;font-size:19px;color:var(--stone);max-width:34em}
+.hero .lede strong{color:var(--ivory);font-weight:600}
+
+.kit{background:var(--panel);border:1px solid var(--line);border-top:2px solid var(--gold);padding:28px;border-radius:4px;min-width:0}
+.kit h2{font-size:28px}
+.kit .sub{color:var(--stone);font-size:15px;margin-top:8px}
+ul.dia{list-style:none;padding:0;margin:18px 0 20px;display:grid;gap:9px;font-size:15px}
+ul.dia li{padding-left:24px;position:relative}
+ul.dia li::before{content:"";position:absolute;left:2px;top:.55em;width:9px;height:9px;border:1.5px solid var(--gold);transform:rotate(45deg)}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;font:inherit;font-weight:700;font-size:16px;background:var(--gold);color:var(--night);border:0;border-radius:3px;padding:15px 22px;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--gold-soft)}
+.btn.ghost{background:transparent;color:var(--gold-soft);border:1px solid var(--gold)}
+.kit .btn{width:100%}
+.fine{font-size:13px;color:var(--dim);margin-top:12px}
+
+section{padding-block:72px;border-top:1px solid var(--line)}
+.sec-head{max-width:42em}
+.sec-head h2{font-size:clamp(32px,4.4vw,50px);margin-top:12px}
+.sec-head p{color:var(--stone);margin-top:14px;font-size:18px}
+
+.two{display:grid;gap:20px;margin-top:40px}
+@media(min-width:800px){.two{grid-template-columns:1fr 1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:26px;min-width:0}
+.card .tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--gold)}
+.card h3{font-size:27px;margin:10px 0 10px}
+.card p{color:var(--stone);font-size:15.5px}
+.card.rec{border-color:var(--gold)}
+blockquote{margin:16px 0 0;padding:14px 16px;border-left:2px solid var(--gold);background:#100f0b;font-size:14.5px;color:var(--ivory);font-family:var(--mono);line-height:1.55}
+
+.get{display:grid;gap:44px;margin-top:44px}
+@media(min-width:900px){.get{grid-template-columns:1fr 1fr;gap:64px;align-items:start}}
+.outputs{list-style:none;padding:0;margin:0}
+.outputs li{display:grid;grid-template-columns:160px 1fr;gap:16px;padding-block:16px;border-bottom:1px solid var(--line)}
+.outputs li:first-child{border-top:1px solid var(--line)}
+.outputs .k{font-family:var(--display);font-size:20px;color:var(--gold-soft);line-height:1.2}
+.outputs .v{color:var(--stone);font-size:15.5px;min-width:0}
+@media(max-width:520px){.outputs li{grid-template-columns:1fr;gap:4px}}
+.sheet{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:24px;min-width:0}
+.sheet h3{font-size:24px;margin:14px 0 4px}
+.sheet .note{font-size:13.5px;color:var(--dim)}
+.bars{display:grid;gap:12px;margin-top:20px}
+.bar{display:grid;grid-template-columns:86px 1fr 74px;gap:12px;align-items:center;font-size:14px}
+.bar .n{font-weight:600}
+.bar .t{height:10px;background:var(--line);border-radius:5px;overflow:hidden}
+.bar .t i{display:block;height:100%;background:var(--gold);border-radius:5px}
+.bar .t i.low{background:var(--stone)}
+.bar .a{font-family:var(--mono);font-size:13px;color:var(--stone);text-align:right;font-variant-numeric:tabular-nums}
+
+.steps{list-style:none;padding:0;margin:40px 0 0;display:grid;gap:20px;counter-reset:s}
+@media(min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps li{counter-increment:s;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:24px;min-width:0}
+.steps li::before{content:"0" counter(s);font-family:var(--mono);color:var(--gold);font-size:13px;letter-spacing:.1em}
+.steps h3{font-size:24px;margin:8px 0 8px}
+.steps p{color:var(--stone);font-size:15.5px}
+code{font-family:var(--mono);font-size:.92em;color:var(--gold-soft);background:#100f0b;padding:1px 6px;border-radius:3px}
+.plan{margin-top:20px;color:var(--stone);font-size:15px;max-width:48em}
+
+.priv{display:grid;gap:0;margin-top:36px}
+@media(min-width:900px){.priv{grid-template-columns:1fr 1fr;column-gap:56px}}
+.priv div{padding-block:16px;border-top:1px solid var(--line)}
+.priv b{display:block;font-family:var(--display);font-weight:400;font-size:21px;color:var(--gold-soft);margin-bottom:4px}
+.priv p{color:var(--stone);font-size:15.5px}
+.help{margin-top:30px;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:20px 24px;font-size:15px;color:var(--stone)}
+.help strong{color:var(--ivory)}
+
+.test{display:grid;gap:16px;margin-top:36px}
+@media(min-width:800px){.test{grid-template-columns:repeat(2,1fr)}}
+.test div{border-left:2px solid var(--gold);padding:4px 0 4px 16px}
+.test b{color:var(--ivory)}
+.test p{color:var(--stone);font-size:15.5px}
+
+.fb{display:grid;gap:40px;margin-top:40px}
+@media(min-width:900px){.fb{grid-template-columns:1fr 1fr;gap:56px;align-items:start}}
+.who{background:var(--panel);border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:4px;padding:24px}
+.who h3{font-size:24px;margin-bottom:12px}
+.who p{color:var(--stone);font-size:15.5px;margin-top:10px}
+ol.qs{margin:0;padding-left:22px;display:grid;gap:10px;color:var(--ivory)}
+ol.qs li::marker{color:var(--gold);font-family:var(--mono)}
+ol.qs span{color:var(--stone);font-size:14.5px;display:block}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+
+.story{display:grid;gap:36px;margin-top:8px;align-items:center}
+@media(min-width:800px){.story{grid-template-columns:220px 1fr;gap:48px}}
+.story img{width:220px;max-width:100%;border-radius:4px;filter:grayscale(.15)}
+.story p{color:var(--stone);margin-top:14px;max-width:40em}
+.story p strong{color:var(--ivory);font-weight:600}
+.quote{font-family:var(--display);font-size:24px;color:var(--gold-soft);margin-top:20px;font-style:italic}
+
+footer{border-top:1px solid var(--line);padding-block:40px 64px;color:var(--dim);font-size:13.5px}
+footer p+p{margin-top:10px}
+footer .disc{border:1px solid var(--line);border-radius:4px;padding:16px 18px;color:var(--stone);font-size:14px;margin-bottom:22px}
+footer .disc b{color:var(--ivory)}
+
+.skip{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--night);padding:8px 12px;font-weight:700}
+.skip:focus{left:8px;top:8px;z-index:5}
+.nav{display:none}
+@media(min-width:900px){.nav{display:flex;gap:26px;font-size:14.5px}.nav a{color:var(--stone);text-decoration:none}.nav a:hover{color:var(--gold-soft)}}
+.tagline{font-family:var(--display);font-style:italic;font-size:clamp(20px,2.4vw,26px);color:var(--gold-soft);margin-top:14px;line-height:1.25}
+.help ul.dia{margin:14px 0 14px;font-size:15px}
+.help ul.dia b{color:var(--ivory)}
+.close{text-align:left}
+.close h2{font-size:clamp(30px,4vw,44px)}
+.close p{color:var(--stone);margin-top:12px;max-width:40em;font-size:18px}
+.close .btnrow{margin-top:24px}
+</style>
+</head>
+<body>
+<a class="skip" href="#top">Skip to content</a>
+<div class="draft">BETA PREVIEW · Not live yet</div>
+
+<header class="wrap top">
+  <a class="logo" href="#top"><img src="img/i0.png" alt="" width="40" height="40">Go Forward <b>Wealth</b> Academy</a>
+  <nav class="nav" aria-label="On this page"><a href="#get">What you get</a><a href="#how">How it works</a><a href="#privacy">Privacy</a><a href="#faq">Questions</a><a href="#feedback">Feedback</a></nav>
+  <span class="pill">MEMBER BETA · v1.0</span>
+</header>
+
+<main id="top">
+<div class="wrap hero">
+  <div>
+    <div class="eyebrow">Early access · Black Wealth Growth Challenge members</div>
+    <h1>See where your money <em>really</em> goes.</h1>
+    <p class="tagline">Income is the river. Wealth is the reservoir.</p>
+    <p class="lede">A free AI money review you run yourself, in your own Claude account: <strong>where your money goes, what quietly covers the gap, your net worth, and a sample budget built on the Millionaire Money Moves framework.</strong> Try it before it goes public, and help shape it.</p>
+  </div>
+  <aside class="kit" aria-labelledby="kit-h">
+    <h2 id="kit-h">Get the beta kit</h2>
+    <p class="sub">Download it from the BWGC member portal. No email sign-up. The kit is free; a paid Claude plan works best for a full review of your own statements.</p>
+    <ul class="dia">
+      <li>The <b>money-review</b> skill for Claude (one zip file)</li>
+      <li>A short Quick Start, a printable intake form and the full User's Guide</li>
+      <li>The Brooks family: a ready-made practice household, so you can try it with no real data</li>
+    </ul>
+    <a class="btn" href="#how">See how it works</a>
+    <p class="fine">The portal download link goes live when the beta opens. · Latest version: Beta v1.0, build 3 · <a href="#changes">What's changed</a></p>
+  </aside>
+</div>
+
+<section id="start" aria-labelledby="start-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Two ways to start</div>
+      <h2 id="start-h">Practice first. Your own numbers when you're ready.</h2>
+      <p>Claude asks which path you want as soon as you start. Most people should begin with Practice.</p>
+    </div>
+    <div class="two">
+      <div class="card rec">
+        <div class="tag">A · RECOMMENDED FIRST</div>
+        <h3>Practice household</h3>
+        <p>Meet the Brooks family: a fictional couple with 6 months of statements, already built into the kit. Claude runs the full review on them, so you see every step and every result before you share anything real. You can also ask for a made-up household that looks like yours; that takes longer and works best on a paid plan.</p>
+        <blockquote>/money-review → "A · Practice household"</blockquote>
+      </div>
+      <div class="card">
+        <div class="tag">B · YOUR OWN STATEMENTS</div>
+        <h3>Your real picture</h3>
+        <p>Download your last <b>6 months</b> of bank and card statements as PDFs (12 for the fullest picture, once you know the process), plus your 2 latest pay stubs. Remove or cover full account numbers, and attach them in your chat, one account at a time if there are many. Claude checks every statement to the penny and asks one short list of questions.</p>
+        <blockquote>/money-review → "B · My own statements"</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="get" aria-labelledby="get-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">What you get back</div>
+      <h2 id="get-h">Your money, in one clear picture.</h2>
+    </div>
+    <div class="get">
+      <ul class="outputs">
+        <li><span class="k">Two-page summary</span><span class="v">What came in, what went out, and what quietly covered the gap, in plain words. Starts with your goal and the money personality you chose.</span></li>
+        <li><span class="k">Power Budget</span><span class="v">Your spending sorted into the six buckets (Setback, Pay, Consume, Invest, Reward, Give), next to a sample plan to discuss. You choose the final numbers.</span></li>
+        <li><span class="k">Net worth</span><span class="v">What you own minus what you owe: your scorecard, with a quarterly tracker.</span></li>
+        <li><span class="k">Spreadsheet</span><span class="v">Every transaction, editable, plus subscriptions, debts and a payoff schedule.</span></li>
+        <li><span class="k">The Sit-Down</span><span class="v">"A Millionaire Money Moves Sit-Down": an AI coach walks you through the playbook with your own numbers, one chapter at a time. It's Claude, not Cedric.</span></li>
+      </ul>
+      <div class="sheet" aria-label="Sample month from the practice data">
+        <span class="pill">SAMPLE DATA</span>
+        <h3>Where one month went</h3>
+        <p class="note">The Brooks family, a fictional practice household: average monthly dollars by bucket. Their savings went down, so Setback shows $0. Your results compare your own numbers with each bucket's target.</p>
+        <div class="bars">
+          <div class="bar"><span class="n">Setback</span><span class="t"><i style="width:0%"></i></span><span class="a">$0</span></div>
+          <div class="bar"><span class="n">Pay</span><span class="t"><i style="width:100%"></i></span><span class="a">$5,623</span></div>
+          <div class="bar"><span class="n">Consume</span><span class="t"><i style="width:20%"></i></span><span class="a">$1,105</span></div>
+          <div class="bar"><span class="n">Invest</span><span class="t"><i style="width:9%"></i></span><span class="a">$498</span></div>
+          <div class="bar"><span class="n">Reward</span><span class="t"><i style="width:0%"></i></span><span class="a">$0</span></div>
+          <div class="bar"><span class="n">Give</span><span class="t"><i style="width:6%"></i></span><span class="a">$350</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">How it works</div>
+      <h2 id="how-h">Three steps. Claude leads the way.</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Add the skill</h3><p>A <i>skill</i> is an add-on that teaches Claude this review. First, turn on file creation: if Claude shows a <b>Create files and artifacts</b> window, click <b>Try it out</b>; otherwise check <b>Settings → Capabilities</b>. Then go to <b>Customize → Skills → + Add → Upload skill</b> and choose the .zip file as it is. One time only. The Quick Start shows every screen.</p></li>
+      <li><h3>Start the review</h3><p>Start a new chat (or a Project called "My Money Review"). Type <code>/money-review</code>, or type: "Start my money review using the money-review skill."</p></li>
+      <li><h3>Follow Claude's lead</h3><p>It walks you through everything, one step at a time: practice or real, the questions, what to upload, then your results and the sit-down.</p></li>
+    </ol>
+    <p class="plan">For your own review, allow an evening to download statements first. On Claude's free plan, a 6-month review usually takes two or three sittings because of usage limits, and that's normal. It goes best if you add the skill first, then start the review in a new chat when you have a fresh allowance. Nothing is lost between sittings: come back to the same chat and type "Please continue where you left off." Built for everyday household money: paychecks, bills, cards, savings and personal debt. Not for business finances, real estate investing, trusts or estates.</p>
+  </div>
+</section>
+
+<section id="privacy" aria-labelledby="privacy-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Your data stays yours</div>
+      <h2 id="privacy-h">I never see your statements. Neither does Cedric or the Challenge.</h2>
+    </div>
+    <div class="priv">
+      <div><b>It stays in your Claude account</b><p>Your statements and results stay in your chat, which Anthropic (the company behind Claude) handles under its own privacy policy. Nothing is sent to Larry, Cedric Nash or the Black Wealth Growth Challenge.</p></div>
+      <div><b>Only your own accounts</b><p>Review your own accounts, or joint accounts where both of you agree. Remove or cover full account numbers; the last 4 digits are enough. Claude masks any full number it finds.</p></div>
+      <div><b>No passwords, ever</b><p>Claude will never ask for logins, passwords or PINs. Never share them.</p></div>
+      <div><b>Delete it when you're done</b><p>You can delete the chat (and the Project) whenever you like. To keep your chats from being used to train Claude, turn off <b>Help Improve our AI models</b> in Settings → Privacy. Setup walks you through it.</p></div>
+      <div><b>Other people stay anonymous</b><p>Payments to family and friends are labeled by role, never by name or memo. Practice mode needs nothing real at all.</p></div>
+      <div><b>Education, not advice</b><p>Investment, tax and legal questions go on a list for a licensed professional. The coach won't answer them.</p></div>
+    </div>
+    <div class="help"><strong>If money is weighing on you,</strong> the review will pause the numbers and point you to real help (U.S. numbers):
+      <ul class="dia">
+        <li><b>988</b> · Suicide &amp; Crisis Lifeline, call or text. In immediate danger, call <b>911</b>.</li>
+        <li><b>1-800-MY-RESET</b> (1-800-697-3738) · National Problem Gambling Helpline. Family members can call too.</li>
+        <li><b>1-800-799-7233</b> · National Domestic Violence Hotline. Or text START to 88788, or chat at thehotline.org.</li>
+        <li><b>nfcc.org</b> · a nonprofit credit counselor, for debt you can't keep up with.</li>
+        <li><b>211</b> · if you can't cover food, rent or utilities right now.</li>
+      </ul>
+      The review isn't counseling. For your relationship or your feelings about money, a licensed counselor or a trusted faith leader is the right person to talk with.</div>
+  </div>
+</section>
+
+<section id="why" aria-labelledby="why-h">
+  <div class="wrap story">
+    <img src="img/i1.jpg" alt="Larry Williams" width="220" height="220">
+    <div>
+      <div class="eyebrow">Why I built this</div>
+      <h2 id="why-h" style="font-size:clamp(28px,3.6vw,40px);margin-top:12px">Larry Williams · Queens, New York</h2>
+      <p>Early in my career I turned down a position at a major bank to chase financial services full time. The passion was strong. The foundation was weak. The money ran out. I drained my savings, tapped my retirement, and ended up working overnight shifts on a shipping dock. <strong>I rebuilt slowly, one right decision at a time</strong>, and the turning point came when I found the right guidance, the right community and a framework to follow.</p>
+      <p>I built this kit so you can see your own numbers clearly, the way I finally saw mine. My mother spent her life making sure people had a seat at the table. This is my way of continuing her work.</p>
+      <p class="quote">"She did not just fight for the seat. She built the table."</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Common questions</div>
+      <h2 id="faq-h">Before you start.</h2>
+    </div>
+    <div class="priv">
+      <div><b>What does it cost?</b><p>The kit is free. It runs in your own Claude account. Claude has a free plan; a paid plan gets through a review in fewer sittings.</p></div>
+      <div><b>Is the coach Cedric Nash?</b><p>No. The coach is Claude, an AI, teaching from the ideas in Cedric's book. It says so before it starts.</p></div>
+      <div><b>Will it tell me what to invest in?</b><p>No. It's education. Investment, tax and legal questions go on a list for a licensed professional.</p></div>
+      <div><b>Do I need to be good with computers?</b><p>If you can attach a file to an email, you can do this. The Quick Start shows every screen.</p></div>
+      <div><b>What if I stop partway?</b><p>Nothing is lost. Come back to the same chat and type "Please continue where you left off."</p></div>
+      <div><b>Should I start with my real statements?</b><p>Start with the Brooks family. Once you've seen how it works, run it on your own.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="feedback" aria-labelledby="feedback-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">You're one of the first</div>
+      <h2 id="feedback-h">Tell us what worked, and what didn't.</h2>
+      <p>We want to learn four things: could you set it up without help, did Claude's guidance make sense, were the results useful, and did you feel your information was safe.</p>
+    </div>
+    <div class="fb">
+      <div>
+        <ol class="qs">
+          <li>Which step was clearest? Which was most confusing?<span>Setup, the conversation, uploading, the results, the sit-down.</span></li>
+          <li>Did you use Practice, your own statements, or both?</li>
+          <li>Was there a word or number you didn't understand?</li>
+          <li>Which part of your results was most useful?</li>
+          <li>What would you add, cut or explain differently?</li>
+          <li>How likely are you to recommend it to another member? (0–10)</li>
+        </ol>
+        <div class="btnrow">
+          <a class="btn" href="#feedback">Leave feedback</a>
+          <a class="btn ghost" href="#feedback">Report a problem</a>
+        </div>
+        <p class="fine">The feedback and problem-report forms open when the beta goes live.</p>
+      </div>
+      <div class="who">
+        <h3>Before you write</h3>
+        <p><strong style="color:var(--ivory)">Who reads it:</strong> Larry Williams reads every response and shares a summary, without names, with Cedric Nash.</p>
+        <p><strong style="color:var(--ivory)">No numbers, please:</strong> don't include account details, dollar amounts or anything from your statements. Tell us how it felt, not what it found.</p>
+        <p><strong style="color:var(--ivory)">Your name is optional:</strong> a first name or "anonymous" is fine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="changes" aria-labelledby="changes-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Versions</div>
+      <h2 id="changes-h">What's changed</h2>
+      <p><b style="color:var(--ivory)">Beta v1.0, build 3 · November 2026</b> · First member beta. The version is in the zip's file name (money-review-v1.0-beta.zip). To update, delete the old skill in Customize → Skills and upload the new zip.</p>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-labelledby="close-h">
+  <div class="wrap">
+    <h2 id="close-h">Ready to see your own numbers?</h2>
+    <p>Start with the Brooks family. When you're comfortable, run it on your own statements, in your own account.</p>
+    <div class="btnrow"><a class="btn" href="#top">Get the beta kit</a><a class="btn ghost" href="#how">See the three steps</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="disc"><b>Please read:</b> This kit runs on Claude, an AI. It is not Cedric Nash. It is based on the ideas in Cedric Nash's published book, <i>Why Should White Guys Have All the Wealth?</i>, but it is not authorized, endorsed, sponsored or reviewed by Cedric Nash or the Black Wealth Growth Challenge. It is for education only. It is not financial, investment, tax, legal or counseling advice. For decisions about your money, talk with a licensed professional.</div>
+    <p><b style="color:var(--stone)">Disclosure:</b> I'm a Black Wealth Growth Challenge ambassador and earn a commission when people join the Challenge through my link. This page and the kit contain no referral links and promote nothing.</p>
+    <p>© 2026 Go Forward Wealth Academy · Larry Williams · Queens, New York</p>
+  </div>
+</footer>
+</body>
+</html>
