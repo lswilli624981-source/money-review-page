@@ -163,6 +163,18 @@ footer{border-top:1px solid var(--p-line);padding-block:40px 64px;color:var(--p-
 footer p+p{margin-top:10px}
 footer .disc{border:1px solid var(--p-line);border-radius:var(--r);padding:16px 18px;color:var(--p-muted);font-size:14px;margin-bottom:22px}
 footer .disc b{color:var(--p-ink)}
+
+.fxs{display:grid;gap:12px}
+.fx{background:var(--p-surface);border:1px solid var(--p-line);border-radius:var(--r-lg);overflow:hidden;transition:border-color .25s var(--ease)}
+.fx[open]{border-color:#4a4331}
+.fx summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:18px 20px;min-height:60px;font-size:18px;font-weight:500;letter-spacing:-.01em}
+.fx summary::-webkit-details-marker{display:none}
+.fx summary svg{flex:none}
+.fx summary span{flex:1}
+.fx summary::after{content:"";flex:none;width:9px;height:9px;border-right:1.6px solid var(--p-muted);border-bottom:1.6px solid var(--p-muted);transform:rotate(45deg);transition:transform .25s var(--ease);margin-right:4px}
+.fx[open] summary::after{transform:rotate(-135deg)}
+.fx-b{padding:0 20px 20px 56px;color:var(--p-muted);font-size:16px}
+@media(max-width:520px){.fx-b{padding-left:20px}}
 </style>
 </head>
 <body>
@@ -235,13 +247,28 @@ footer .disc b{color:var(--p-ink)}
       <h2 id="get-h">Five things the review gives you</h2>
     </div>
     <div class="get">
-      <ul class="outputs">
-        <li><span class="k">Two-page summary</span><span class="v">What came in, what went out, and what quietly covered the gap, in plain words. Starts with your goal and the money personality you chose.</span></li>
-        <li><span class="k">Power Budget</span><span class="v">Your spending sorted into the six buckets (Save (Setback), Pay, Consume, Invest, Reward, Give), next to a sample plan to discuss. You choose the final numbers.</span></li>
-        <li><span class="k">Net worth</span><span class="v">What you own minus what you owe: your scorecard, with a quarterly tracker.</span></li>
-        <li><span class="k">Spreadsheet</span><span class="v">Every transaction, editable, plus subscriptions, debts and a payoff schedule.</span></li>
-        <li><span class="k">The Sit-Down</span><span class="v">"A Millionaire Money Moves Sit-Down": an AI coach walks you through the playbook with your own numbers, one chapter at a time. It's Claude, not Cedric.</span></li>
-      </ul>
+      <div class="fxs">
+        <details class="fx">
+          <summary><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a62a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h7"/></svg><span>Two-page summary</span></summary>
+          <div class="fx-b"><p>What came in, what went out, and what quietly covered the gap, in plain words. Starts with your goal and the money personality you chose.</p></div>
+        </details>
+        <details class="fx">
+          <summary><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a62a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="7" height="7" rx="1.5"/><rect x="14" y="4" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Power Budget</span></summary>
+          <div class="fx-b"><p>Your spending sorted into the six buckets (Save (Setback), Pay, Consume, Invest, Reward, Give), next to a sample plan to discuss. You choose the final numbers.</p></div>
+        </details>
+        <details class="fx">
+          <summary><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a62a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5M4 19h16"/><path d="M7 15l4-4 3 3 5-6"/></svg><span>Net worth</span></summary>
+          <div class="fx-b"><p>What you own minus what you owe: your scorecard, with a quarterly tracker.</p></div>
+        </details>
+        <details class="fx">
+          <summary><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a62a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 10h18M3 15h18M10 4v16"/></svg><span>Spreadsheet</span></summary>
+          <div class="fx-b"><p>Every transaction, editable, plus subscriptions, debts and a payoff schedule.</p></div>
+        </details>
+        <details class="fx">
+          <summary><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a62a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-7l-4 3v-3H6a2 2 0 0 1-2-2z"/></svg><span>The Sit-Down</span></summary>
+          <div class="fx-b"><p>"A Millionaire Money Moves Sit-Down": an AI coach walks you through the playbook with your own numbers, one chapter at a time. It's Claude, not Cedric.</p></div>
+        </details>
+      </div>
       <div class="sheet" aria-label="Sample month from the practice data">
         <span class="pill">SAMPLE DATA</span>
         <h3>Where one month went</h3>
