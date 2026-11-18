@@ -150,6 +150,103 @@ footer .disc b{color:var(--ivory)}
 .close .btnrow{margin-top:24px}
 .toplink{font-weight:700;font-size:14.5px;color:var(--gold-soft);border:1px solid var(--gold);border-radius:3px;padding:9px 14px;text-decoration:none;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
 .toplink:hover{background:var(--gold);color:var(--night)}
+
+/* ---- Impeccable pass: typeset, layout, polish. Same brand, same content. ---- */
+html{scrollbar-color:#3a3424 var(--night);scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+::selection{background:var(--gold);color:var(--night)}
+:focus-visible{outline:2px solid var(--gold-soft);outline-offset:4px;border-radius:2px}
+a{text-underline-offset:.2em;text-decoration-thickness:1px}
+body{line-height:1.68;letter-spacing:.006em;font-feature-settings:"kern","liga"}
+h1,h2,h3{text-wrap:balance;letter-spacing:-.012em}
+p,li{text-wrap:pretty}
+.wrap{max-width:1160px}
+
+/* the notice becomes a quiet line, not a banner */
+.draft{background:transparent;color:var(--gold-soft);border-bottom:1px solid var(--line);font-weight:600;letter-spacing:.16em;font-size:11.5px;padding:10px 12px}
+
+.top{padding-block:26px}
+.logo{font-size:22px;gap:12px}
+.nav a{letter-spacing:.02em}
+.toplink{border-radius:2px;letter-spacing:.02em;transition:background-color .25s cubic-bezier(.16,1,.3,1),color .25s cubic-bezier(.16,1,.3,1)}
+
+/* hero */
+.hero{padding-block:40px 88px;gap:48px}
+@media(min-width:900px){.hero{grid-template-columns:1.2fr .8fr;gap:72px;padding-block:72px 128px;align-items:end}}
+.hero h1{font-size:clamp(44px,7.2vw,92px);line-height:.98;margin-top:0}
+.hero h1 em{color:var(--gold-soft)}
+.tagline{margin-top:26px;font-size:clamp(20px,2.2vw,26px)}
+.hero .lede{margin-top:22px;max-width:36em;font-size:18.5px}
+.audience{margin-top:26px;font-size:14px;color:var(--dim);letter-spacing:.04em}
+.kit{border-radius:2px;border-top:1px solid var(--gold);padding:32px;box-shadow:0 30px 70px -40px rgba(0,0,0,.9),0 2px 0 rgba(255,255,255,.02) inset}
+.kit h2{font-size:30px}
+ul.dia li::before{border-width:1px;width:7px;height:7px;top:.62em}
+
+/* buttons: stated, hover, pressed */
+.btn{border-radius:2px;min-height:52px;padding:14px 24px;letter-spacing:.01em;transition:transform .25s cubic-bezier(.16,1,.3,1),background-color .25s cubic-bezier(.16,1,.3,1),box-shadow .25s cubic-bezier(.16,1,.3,1);box-shadow:0 10px 24px -14px rgba(212,166,42,.55)}
+.btn:hover{transform:translateY(-1px);box-shadow:0 16px 30px -14px rgba(212,166,42,.6)}
+.btn:active{transform:translateY(1px);box-shadow:0 4px 10px -8px rgba(212,166,42,.5)}
+.btn.ghost{box-shadow:none}
+.btn.ghost:hover{background:rgba(212,166,42,.08);box-shadow:none}
+@media(prefers-reduced-motion:reduce){.btn,.toplink{transition:none}.btn:hover,.btn:active{transform:none}}
+
+/* sections: more room, more above a heading than below it */
+section{padding-block:104px 96px}
+@media(max-width:700px){section{padding-block:72px 64px}}
+.sec-head{max-width:46em}
+.sec-head::before{content:"";display:block;width:56px;height:1px;background:var(--gold);margin-bottom:28px}
+.sec-head h2{font-size:clamp(34px,4.8vw,58px);line-height:1.04;margin-top:0}
+.sec-head p{max-width:38em;margin-top:18px}
+
+/* two ways to start: a comparison set in columns, not boxes */
+.two{gap:0;margin-top:56px;border-top:1px solid var(--line)}
+.card{background:transparent;border:0;border-radius:0;padding:36px 0 8px}
+@media(min-width:800px){.card{padding:40px 48px 8px 0}.card+.card{padding-left:48px;padding-right:0;border-left:1px solid var(--line)}}
+@media(max-width:799px){.card+.card{border-top:1px solid var(--line)}}
+.card.rec{border-color:var(--line)}
+.card .tag{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.16em;color:var(--gold)}
+.card h3{font-size:32px;margin:12px 0 12px}
+.card p{font-size:16px;max-width:34em}
+blockquote{border:1px solid var(--line);border-left:1px solid var(--line);border-radius:2px;background:#110f0b;margin-top:20px}
+
+/* what you get */
+.outputs li{padding-block:20px;grid-template-columns:176px 1fr}
+.outputs .k{font-size:21px}
+.outputs .v{font-size:16px}
+.sheet{border-radius:2px;padding:30px;box-shadow:0 30px 70px -44px rgba(0,0,0,.9)}
+.sheet .pill{font-family:var(--body);font-weight:700;font-size:11px;letter-spacing:.16em;background:transparent;color:var(--gold);padding:0;border-radius:0}
+.sheet h3{font-size:28px;margin-top:12px}
+.bar{grid-template-columns:118px 1fr 78px;font-size:14.5px}
+.bar .t{height:6px;border-radius:0;background:#231f16}
+.bar .t i{border-radius:0;transform-origin:left center}
+.bar .a{font-family:var(--body);font-size:14.5px;color:var(--ivory);font-variant-numeric:tabular-nums lining-nums}
+.sheet.is-armed .bar .t i{transform:scaleX(0)}
+.sheet.is-in .bar .t i{transform:scaleX(1);transition:transform 1.1s cubic-bezier(.16,1,.3,1)}
+.sheet.is-in .bar:nth-child(2) .t i{transition-delay:.08s}
+.sheet.is-in .bar:nth-child(3) .t i{transition-delay:.16s}
+.sheet.is-in .bar:nth-child(4) .t i{transition-delay:.24s}
+.sheet.is-in .bar:nth-child(6) .t i{transition-delay:.32s}
+
+/* three steps: the order is the information, so the numerals are set large */
+.steps{gap:0;margin-top:56px;border-top:1px solid var(--line)}
+.steps li{background:transparent;border:0;border-radius:0;padding:32px 0 8px}
+@media(min-width:900px){.steps li{padding:36px 40px 8px 0}.steps li+li{padding-left:40px;border-left:1px solid var(--line)}}
+@media(max-width:899px){.steps li+li{border-top:1px solid var(--line)}}
+.steps li::before{content:counter(s);font-family:var(--display);font-size:56px;line-height:1;letter-spacing:0;color:var(--gold)}
+.steps h3{font-size:27px;margin:14px 0 10px}
+.steps p{font-size:16px}
+.plan{max-width:46em;margin-top:44px;padding-top:28px;border-top:1px solid var(--line)}
+
+.priv div{padding-block:22px}
+.priv b{font-size:23px;margin-bottom:6px}
+.priv p{font-size:16px;max-width:34em}
+.help{border-radius:2px;padding:26px 30px;font-size:15.5px}
+.story img{border-radius:2px}
+.quote{font-size:28px;line-height:1.25;max-width:22em}
+.who{border-radius:2px;border-top:1px solid var(--gold);padding:28px}
+.close h2{font-size:clamp(34px,4.8vw,58px);line-height:1.04}
+footer .disc{border-radius:2px}
+code{font-family:var(--mono);font-size:.92em;color:var(--gold-soft)}
 </style>
 </head>
 <body>
@@ -165,10 +262,10 @@ footer .disc b{color:var(--ivory)}
 <main id="top">
 <div class="wrap hero">
   <div>
-    <div class="eyebrow">Early access · Black Wealth Growth Challenge members</div>
     <h1>See where your money <em>really</em> goes.</h1>
     <p class="tagline">Income is the river. Wealth is the reservoir.</p>
     <p class="lede">A free AI money review you run yourself, in your own Claude account: <strong>where your money goes, what quietly covers the gap, your net worth, and a sample budget built on the Millionaire Money Moves framework.</strong> Try it before it goes public, and help shape it.</p>
+    <p class="audience">Early access for Black Wealth Growth Challenge members.</p>
   </div>
   <aside class="kit" aria-labelledby="kit-h">
     <h2 id="kit-h">Get the beta kit</h2>
@@ -178,8 +275,8 @@ footer .disc b{color:var(--ivory)}
       <li>A short Quick Start, a printable intake form and the full User's Guide</li>
       <li>The Brooks family: a ready-made practice household, so you can try it with no real data</li>
     </ul>
-    <a class="btn" href="#how">See how it works</a>
-    <a class="btn ghost" href="install.html" style="margin-top:10px">Install steps</a>
+    <a class="btn" href="install.html">Install Money Review</a>
+    <a class="btn ghost" href="#how" style="margin-top:10px">See how it works</a>
     <p class="fine">The portal download link goes live when the beta opens. · Latest version: Beta v1.0, build 5 · <a href="#changes">What's changed</a></p>
   </aside>
 </div>
@@ -187,7 +284,6 @@ footer .disc b{color:var(--ivory)}
 <section id="start" aria-labelledby="start-h">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Two ways to start</div>
       <h2 id="start-h">Practice first. Your own numbers when you're ready.</h2>
       <p>Claude asks which path you want as soon as you start. Most people should begin with Practice.</p>
     </div>
@@ -211,7 +307,6 @@ footer .disc b{color:var(--ivory)}
 <section id="get" aria-labelledby="get-h">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">What you get back</div>
       <h2 id="get-h">Your money, in one clear picture.</h2>
     </div>
     <div class="get">
@@ -242,7 +337,6 @@ footer .disc b{color:var(--ivory)}
 <section id="how" aria-labelledby="how-h">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">How it works</div>
       <h2 id="how-h">Three steps. Claude leads the way.</h2>
     </div>
     <ol class="steps">
@@ -257,7 +351,6 @@ footer .disc b{color:var(--ivory)}
 <section id="privacy" aria-labelledby="privacy-h">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Your data stays yours</div>
       <h2 id="privacy-h">I never see your statements. Neither does Cedric or the Challenge.</h2>
     </div>
     <div class="priv">
@@ -284,8 +377,7 @@ footer .disc b{color:var(--ivory)}
   <div class="wrap story">
     <img src="img/i1.jpg" alt="Larry Williams" width="220" height="220">
     <div>
-      <div class="eyebrow">Why I built this</div>
-      <h2 id="why-h" style="font-size:clamp(28px,3.6vw,40px);margin-top:12px">Larry Williams · Queens, New York</h2>
+      <h2 id="why-h" style="font-size:clamp(28px,3.6vw,40px)">Larry Williams · Queens, New York</h2>
       <p>Early in my career I turned down a position at a major bank to chase financial services full time. The passion was strong. The foundation was weak. The money ran out. I drained my savings, tapped my retirement, and ended up working overnight shifts on a shipping dock. <strong>I rebuilt slowly, one right decision at a time</strong>, and the turning point came when I found the right guidance, the right community and a framework to follow.</p>
       <p>I built this kit so you can see your own numbers clearly, the way I finally saw mine. My mother spent her life making sure people had a seat at the table. This is my way of continuing her work.</p>
       <p class="quote">"She did not just fight for the seat. She built the table."</p>
@@ -296,7 +388,6 @@ footer .disc b{color:var(--ivory)}
 <section id="faq" aria-labelledby="faq-h">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Common questions</div>
       <h2 id="faq-h">Before you start.</h2>
     </div>
     <div class="priv">
@@ -313,7 +404,6 @@ footer .disc b{color:var(--ivory)}
 <section id="feedback" aria-labelledby="feedback-h">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">You're one of the first</div>
       <h2 id="feedback-h">Tell us what worked, and what didn't.</h2>
       <p>We want to learn four things: could you set it up without help, did Claude's guidance make sense, were the results useful, and did you feel your information was safe.</p>
     </div>
@@ -346,7 +436,6 @@ footer .disc b{color:var(--ivory)}
 <section id="changes" aria-labelledby="changes-h">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">Versions</div>
       <h2 id="changes-h">What's changed</h2>
       <p><b style="color:var(--ivory)">Beta v1.0, build 5 · November 2026</b> · First member beta. The version is in the zip's file name (money-review-v1.0-beta.zip). To update, upload the new zip from the <a href="install.html">install page</a> and choose "Upload and replace."</p>
     </div>
@@ -369,5 +458,9 @@ footer .disc b{color:var(--ivory)}
     <p>© 2026 Go Forward Wealth Academy · Larry Williams · Queens, New York</p>
   </div>
 </footer>
+<script>
+(function(){var s=document.querySelector('.sheet');if(!s||!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+s.classList.add('is-armed');new IntersectionObserver(function(e,o){e.forEach(function(x){if(x.isIntersecting){requestAnimationFrame(function(){s.classList.add('is-in')});o.disconnect()}})},{threshold:.35}).observe(s)})();
+</script>
 </body>
 </html>
